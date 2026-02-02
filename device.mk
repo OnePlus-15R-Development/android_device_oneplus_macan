@@ -70,10 +70,9 @@ $(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,ENABLE_GM,true)
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.oplus
+    vendor.qti.hardware.vibrator.service
 
-$(call soong_config_set,OPLUS_LINEAGE_VIBRATOR_HAL,USE_EFFECT_STREAM,true)
-$(call soong_config_set,OPLUS_LINEAGE_VIBRATOR_HAL,INCLUDE_DIR,$(LOCAL_PATH)/vibrator/include)
+$(call soong_config_set,qti_vibrator,use_effect_stream,true)
 
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8845-common/common.mk)
